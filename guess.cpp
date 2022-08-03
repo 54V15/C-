@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    srand(time(NULL));
     int random = rand() % 10; + 1;
     cout << "I'm thinking of a number! Try to guess it" << endl;
     int guess = -1;
