@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     cout << "Hello, there! Whats's your name? ";
     string name;
-    cin >> name;
+    getline(cin, name);
     if(name == "David"){
         cout << "Hey! That's My Name!" << endl;
     }else{
