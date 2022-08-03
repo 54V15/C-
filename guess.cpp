@@ -8,7 +8,7 @@ int main()
 {
     srand(time(NULL));
     int random = rand() % 10; + 1;
-    cout << "I'm thinking of a number! Try to guess it" << endl;
+    cout << "I'm thinking of a number between 1 and 100! Try to guess it" << endl;
     int guess = -1;
    
     while (guess != random)
@@ -16,7 +16,13 @@ int main()
         cin >> guess;
         if (guess != random)
         {
-            cout << "Nope! Guess Again!" << endl;
+            cout << "Nope! ";
+            if(guess < random){
+                cout << "Too low! ";
+            }else if(guess > random){
+                cout << "Too high! ";
+            }
+            cout << "Guess Again!" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
