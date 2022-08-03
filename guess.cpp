@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
-#include <limits>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 int main()
 {
-    int random = 4;
+    int random = rand() % 10; + 1;
     cout << "I'm thinking of a number! Try to guess it" << endl;
     int guess = -1;
    
